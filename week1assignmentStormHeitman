@@ -1,0 +1,40 @@
+#1
+SELECT * FROM flights ORDER BY distance DESC;
+
+SELECT dest FROM flights WHERE distance = (SELECT MAX (distance) from flights);
+
+#2
+SELECT * FROM planes limit 3000;
+
+SELECT DISTINCT model FROM planes;
+
+SELECT * FROM planes WHERE engines <= 1 ORDER BY seats DESC limit 1;
+
+SELECT * FROM planes WHERE engines = 2 ORDER BY seats DESC limit 1;
+
+SELECT * FROM planes WHERE engines = 3 ORDER BY seats DESC limit 1;
+ 
+SELECT * FROM planes WHERE engines = 4 ORDER BY seats DESC limit 1;
+
+#3
+SELECT COUNT(*)FROM flights; 
+
+#4
+
+SELECT  carrier, COUNT(*) AS '# of Flights' FROM flights GROUP BY carrier;
+
+#5
+
+SELECT  carrier, COUNT(*) AS '# of Flights' FROM flights GROUP BY carrier ORDER BY '# of Flights' DESC;
+
+#6
+
+???
+
+#7 
+
+???
+
+#8
+
+???
